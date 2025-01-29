@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional statement assignment</title>
+  </head>
+  <body style="background-color: rgb(1, 6, 86); color: white;">
+    <style>
+     input{
+        padding: 5px 20px;
+      }
+      button{
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 15px;
+      }
+    </style>
+    <center><h1>SQI Conditional Statement Assignment </h1></center>
+    <h2>Aroje</h2>
+    <input id="address" type="text" placeholder="Address" /> <br> <br>
+    <button onclick="submitAddress()">Submit</button>
+
+    <h2>Remove extra space</h2>
+    <input type="text" id="word" placeholder="Enter word" /> <br> <br>
+    <button onclick="submitSentence()">Submit</button>
+
+    <h2>Password check</h2>
+    <input type="text" id="password" placeholder="Enter Password" /> <br> <br>
+    <button onclick="passwordStrong()">Submit</button>
+
+    <h2>Is even</h2>
+    <input type="text" id="cartnumber" placeholder="Enter numbwer" /> <br> <br>
+    <button onclick="isEven()">Check if even</button>
+
+    <h2>Weather checker</h2>
+    <input type="text" id="temp" /> <br> <br>
+    <button onclick="checkWeather()">Check weather</button>
+    
+    <h2>Checking luggage weight </h2>
+    <input type="number" id="weight" /> <br> <br>
+    <button onclick="weightChecker()">Check weight</button>
+
+    <h2>Check if user name is correct</h2>
+        <input type="text" id="username" /> <br> <br>
+    <button onclick="correctUsername()">Submit username</button>
+
+    <h2>BMI calculator </h2>
+    <input type="text" name="" id="bodyWeight" placeholder="Enter body weight in kg">  <br> <br>
+    <input type="text" name="" id="bodyHeight" placeholder="Enter body height in m" > <br> <br>
+    <button onclick=" calculateBMI()">Calculate the BMI</button>
+
+<script>
+            // ASIGNMENT 1
+            function submitAddress() {
+              var newAddress = address.value;
+
+              console.log(newAddress.toLowerCase());
+            }
+
+            //  ASSIGNMENT 3
+      function submitSentence(){
+       console.log( word.value.replace(/\s+/g, ' ').trim());
+      }
+
+
+
+      // assignment 4
+      function passwordStrong() {
+          password.value
+          const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+          alert( regex.test(password.value));
+      }
+      // assignmrnt 5 ( even number)
+      function isEven(){
+          if(cartnumber.value%2 ==0){
+              alert( ' Won discount')
+          }
+          else{
+              alert('lost discount')
+          }
+      }
+
+      // asignment 6
+      function checkWeather(){
+        if(temp.value<19)
+        console.log('Temp is cold');
+
+
+      else if(temp.value>=20 && temp.value<=28){
+        console.log('Temp is warm');
+
+      }
+      else if(temp.value>28){
+        console.log('Temp is Hot');
+
+      }
+      }
+
+// assignment10
+      function weightChecker(){
+        if (weight.value<20){
+          console.log('Passenger luggage is underweight');
+          
+        }
+       else if (weight.value>=20 && weight.value<=30){
+          console.log('Passenger luggage is allowed');
+          
+        }
+        if (weight.value>30){
+          console.log('Passenger luggage is overweight');    
+        }
+      }
+   
+      // assignment 9
+          function correctUsername(){
+        var checkusername= /^[a-zA-Z0-9_]+$/
+        if (checkusername.test(username.value) ==true) {
+          console.log("Correct username");
+          
+        }
+        else{
+          console.log('Please enter a correct username');
+          
+        }
+
+        
+      }
+      // assignment 8
+        function calculateBMI(){
+var BMI= bodyWeight.value/bodyHeight.value
+
+if(BMI <18.5){
+  console.log('Underweight');
+}
+else if(BMI>=18.5 && BMI <=24.9){
+  console.log('Normal');
+}
+        
+else if(BMI>=25 && BMI <=29.9){
+  console.log('Overweight');
+}
+if(BMI >=30 ){
+  console.log('Obessed');
+}
+}
+        
+    </script>
+  </body>
+</html>
