@@ -69,7 +69,7 @@
       function passwordStrong() {
           password.value
           const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-          alert( regex.test(password.value));
+          console.log( regex.test(password.value));
       }
       // assignmrnt 5 ( even number)
       function isEven(){
@@ -77,7 +77,7 @@
               alert( ' Won discount')
           }
           else{
-              alert('lost discount')
+              alert('Not eligible for discount')
           }
       }
 
@@ -85,15 +85,11 @@
       function checkWeather(){
         if(temp.value<19)
         console.log('Temp is cold');
-
-
       else if(temp.value>=20 && temp.value<=28){
         console.log('Temp is warm');
-
       }
       else if(temp.value>28){
         console.log('Temp is Hot');
-
       }
       }
 
@@ -101,11 +97,9 @@
       function weightChecker(){
         if (weight.value<20){
           console.log('Passenger luggage is underweight');
-          
         }
        else if (weight.value>=20 && weight.value<=30){
           console.log('Passenger luggage is allowed');
-          
         }
         if (weight.value>30){
           console.log('Passenger luggage is overweight');    
